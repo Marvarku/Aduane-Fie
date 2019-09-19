@@ -22,7 +22,7 @@
 
 		.parallax {
 			  /* The image used */
-  background-image: url("images/mini-pavlovas.jpg");
+  background-image: url("images/pizza-stretch.jpg");
 
   /* Set a specific height */
   min-height: 500px; 
@@ -48,9 +48,19 @@
   background-size: cover;
 		}
 
-		.table tr {
-   text-align: center;   
-}
+
+			.parallax-content ul{
+				margin-bottom: 50px;
+			}
+
+			.parallax-content .card{
+				transition: transform .5s;
+			}
+
+			.parallax-content .card:hover {
+				transform: scale(1.1);
+				z-index:1;
+			}
 	</style>
   </head>
   <body>
@@ -128,67 +138,82 @@
 </div>
 
 <div class="parallax" style="padding-top: 50px; padding-bottom: 50px;">
-	<div>
-		<h2 style=" margin-bottom: 50px;" align="center" class="text-light">Featured Dishes</h2>
-		<table class="table">
-  			<tbody>
-    				<tr>
-      					<td style="border: 0">
-						<div class="card" style="width:400px;">
-  							<img class="card-img-top" src="images/alfredo-sauce.jpg" alt="Card image">
-							<h5 class="card-footer" style="margin-bottom: 0px;"> The Alfredo Sauce</h5>
-						</div>
-					</td>
-      					<td style="border: 0">
-												<div class="card" style="width:400px;">
-  							<img class="card-img-top" src="images/caprese-salad.jpg" alt="Card image">
-							<h5 class="card-footer" style="margin-bottom: 0px;">Caprese Salad/h5>
-						</div>
-					</td>
-      					<td style="border: 0">
-												<div class="card" style="width:400px;">
-  							<img class="card-img-top" src="images/mini-pavlovas.jpg" alt="Card image" style="height:400px;">
-							<h5 class="card-footer" style="margin-bottom: 0px;">mini pavlovas</h5>
-						</div>
-					</td>
-      					<td style="border: 0">
-												<div class="card" style="width:400px;">
-  							<img class="card-img-top" src="images/muffin-flower.jpg" alt="Card image" style="height:400px;">
-							<h5 class="card-footer" style="margin-bottom: 0px;">marviees parfait</h5>
-						</div>
-					</td>
-					
-    				</tr>
-
-				<tr>
-					<td style="border: 0">
+	<div class="text-center parallax-content">
+		<h2 style=" margin-bottom: 50px;" class="text-light">Featured Dishes</h2>
+		<ul class="list-inline">
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="1" onClick="onDishClick(this);">
 						<div class="card" style="width:400px;">
   							<img class="card-img-top" src="images/julia.jpg" alt="Card image">
 							<h5 class="card-footer" style="margin-bottom: 0px;">Something here</h5>
 						</div>
-					</td>
-      					<td style="border: 0">
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="2" onClick="onDishClick(this);">
+										<div class="card" style="width:400px;">
+  							<img class="card-img-top" src="images/alfredo-sauce.jpg" alt="Card image">
+							<h5 class="card-footer" style="margin-bottom: 0px;"> The Alfredo Sauce</h5>
+						</div>
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="3" onClick="onDishClick(this);">
+												<div class="card" style="width:400px;">
+  							<img class="card-img-top" src="images/mini-pavlovas.jpg" alt="Card image" style="height:400px;">
+							<h5 class="card-footer" style="margin-bottom: 0px;">mini pavlovas</h5>
+						</div>
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="4" onClick="onDishClick(this);">
+												<div class="card" style="width:400px;">
+  							<img class="card-img-top" src="images/muffin-flower.jpg" alt="Card image" style="height:400px;">
+							<h5 class="card-footer" style="margin-bottom: 0px;">marviees parfait</h5>
+						</div>
+			</li>
+		</ul>
+			
+				<ul class="list-inline">
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="5" onClick="onDishClick(this);">
+							<div class="card" style="width:400px;">
+  							<img class="card-img-top" src="images/louis.jpg" alt="Card image" style="height:400px;">
+							<h5 class="card-footer" style="margin-bottom: 0px;">Something here</h5>
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="6" onClick="onDishClick(this);">
 							<div class="card" style="width:400px;">
   							<img class="card-img-top" src="images/georgia.jpg" alt="Card image">
 							<h5 class="card-footer" style="margin-bottom: 0px;">Something here</h5>
 						</div>
-					</td>
-      					<td style="border: 0">
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="7" onClick="onDishClick(this);">
 							<div class="card" style="width:400px;">
   							<img class="card-img-top" src="images/khloe.jpg" alt="Card image" style="height:400px;">
 							<h5 class="card-footer" style="margin-bottom: 0px;">Something here</h5>
 						</div>
-					</td>
-      					<td style="border: 0">
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="8" onClick="onDishClick(this);">
 							<div class="card" style="width:400px;">
   							<img class="card-img-top" src="images/louis.jpg" alt="Card image" style="height:400px;">
 							<h5 class="card-footer" style="margin-bottom: 0px;">Something here</h5>
 						</div>
-					</td>
-				</tr>
-  			</tbody>
-		</table>
+			</li>
+		</ul>
 	</div>	
+</div>
+
+<!-- dishes modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="parallax2 text-center container">
@@ -224,7 +249,27 @@
 </footer>
 <!-- Footer -->
 
-
+	<!-- custom js -->
+	<script>
+		const DISHES = [ 
+			{
+				id:1, 
+				name: 'Baked Bread', 
+				description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem'
+			},
+ {id:2, name: 'The Alfredo Sauce', description: 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.'}, {id:3, name:'mini pavlovas', description: 'vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. '} ];
+		const getDish = (id) => {
+			return DISHES.filter((dish) => (dish.id == id))[0]
+		};
+		function onDishClick(dish) {
+			const selectedDish = getDish(dish.id);
+			    // e.preventDefault();
+    			var mymodal = $('#exampleModalCenter');
+    			mymodal.find('.modal-title').text(selectedDish.name);
+			mymodal.find('.modal-body').text(selectedDish.description);
+    			mymodal.modal('show');
+		}
+	</script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
