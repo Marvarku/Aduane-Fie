@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <title>Aduane Fie</title>
 	<style>
 		.carousel-inner > .carousel-item {
@@ -22,7 +24,7 @@
 
 		.parallax {
 			  /* The image used */
-  background-image: url("images/mini-pavlovas.jpg");
+  background-image: url("images/pizza-stretch.jpg");
 
   /* Set a specific height */
   min-height: 500px; 
@@ -31,7 +33,7 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
 		}
 		
 		.parallax2 {
@@ -48,9 +50,19 @@
   background-size: cover;
 		}
 
-		.table tr {
-   text-align: center;   
-}
+
+			.parallax-content ul{
+				margin-bottom: 50px;
+			}
+
+			.parallax-content .card{
+				transition: transform .5s;
+			}
+
+			.parallax-content .card:hover {
+				transform: scale(1.1);
+				z-index:1;
+			}
 	</style>
   </head>
   <body>
@@ -78,7 +90,7 @@
         <a class="nav-link" href="aduaneGallery.html">Gallery<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="order.html">Order<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Order<span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -128,67 +140,91 @@
 </div>
 
 <div class="parallax" style="padding-top: 50px; padding-bottom: 50px;">
-	<div>
-		<h2 style=" margin-bottom: 50px;" align="center" class="text-light">Featured Dishes</h2>
-		<table class="table">
-  			<tbody>
-    				<tr>
-      					<td style="border: 0">
-						<div class="card" style="width:400px;">
-  							<img class="card-img-top" src="images/alfredo-sauce.jpg" alt="Card image">
-							<h5 class="card-footer" style="margin-bottom: 0px;"> The Alfredo Sauce</h5>
-						</div>
-					</td>
-      					<td style="border: 0">
-												<div class="card" style="width:400px;">
-  							<img class="card-img-top" src="images/caprese-salad.jpg" alt="Card image">
-							<h5 class="card-footer" style="margin-bottom: 0px;">Caprese Salad/h5>
-						</div>
-					</td>
-      					<td style="border: 0">
-												<div class="card" style="width:400px;">
-  							<img class="card-img-top" src="images/mini-pavlovas.jpg" alt="Card image" style="height:400px;">
-							<h5 class="card-footer" style="margin-bottom: 0px;">mini pavlovas</h5>
-						</div>
-					</td>
-      					<td style="border: 0">
-												<div class="card" style="width:400px;">
-  							<img class="card-img-top" src="images/muffin-flower.jpg" alt="Card image" style="height:400px;">
-							<h5 class="card-footer" style="margin-bottom: 0px;">marviees parfait</h5>
-						</div>
-					</td>
-					
-    				</tr>
-
-				<tr>
-					<td style="border: 0">
+	<div class="text-center parallax-content">
+		<h2 style=" margin-bottom: 50px;" class="text-light">Featured Dishes</h2>
+		<ul class="list-inline">
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="1" onClick="onDishClick(this);">
 						<div class="card" style="width:400px;">
   							<img class="card-img-top" src="images/julia.jpg" alt="Card image">
 							<h5 class="card-footer" style="margin-bottom: 0px;">Something here</h5>
 						</div>
-					</td>
-      					<td style="border: 0">
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="2" onClick="onDishClick(this);">
+										<div class="card" style="width:400px;">
+  							<img class="card-img-top" src="images/alfredo-sauce.jpg" alt="Card image">
+							<h5 class="card-footer" style="margin-bottom: 0px;"> The Alfredo Sauce</h5>
+						</div>
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="3" onClick="onDishClick(this);">
+												<div class="card" style="width:400px;">
+  							<img class="card-img-top" src="images/mini-pavlovas.jpg" alt="Card image" style="height:400px;">
+							<h5 class="card-footer" style="margin-bottom: 0px;">mini pavlovas</h5>
+						</div>
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="4" onClick="onDishClick(this);">
+												<div class="card" style="width:400px;">
+  							<img class="card-img-top" src="images/muffin-flower.jpg" alt="Card image" style="height:400px;">
+							<h5 class="card-footer" style="margin-bottom: 0px;">marviees parfait</h5>
+						</div>
+			</li>
+		</ul>
+			
+				<ul class="list-inline">
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="5" onClick="onDishClick(this);">
+							<div class="card" style="width:400px;">
+  							<img class="card-img-top" src="images/louis.jpg" alt="Card image" style="height:400px;">
+							<h5 class="card-footer" style="margin-bottom: 0px;">Something here</h5>
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="6" onClick="onDishClick(this);">
 							<div class="card" style="width:400px;">
   							<img class="card-img-top" src="images/georgia.jpg" alt="Card image">
 							<h5 class="card-footer" style="margin-bottom: 0px;">Something here</h5>
 						</div>
-					</td>
-      					<td style="border: 0">
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="7" onClick="onDishClick(this);">
 							<div class="card" style="width:400px;">
   							<img class="card-img-top" src="images/khloe.jpg" alt="Card image" style="height:400px;">
 							<h5 class="card-footer" style="margin-bottom: 0px;">Something here</h5>
 						</div>
-					</td>
-      					<td style="border: 0">
+			</li>
+			<li class="list-inline-item" data-toggle="modal" data-target="#exampleModalCenter" id="8" onClick="onDishClick(this);">
 							<div class="card" style="width:400px;">
   							<img class="card-img-top" src="images/louis.jpg" alt="Card image" style="height:400px;">
 							<h5 class="card-footer" style="margin-bottom: 0px;">Something here</h5>
 						</div>
-					</td>
-				</tr>
-  			</tbody>
-		</table>
+			</li>
+		</ul>
 	</div>	
+</div>
+
+<!-- dishes modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	<div>
+		<img src="" class="modal-img img-responsive" style="width:100%; height:700px;">
+	</div>
+	<div class="modal-description" style="padding-top:10px;">
+	
+	</div>
+      </div>
+      <div class="modal-footer">
+	<button type="button" class="btn btn-success">
+		<a href="order.html" style="color: white; text-decoration: none;"> Order</a>
+	</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="parallax2 text-center container">
@@ -199,32 +235,87 @@
 
 
 <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4 bg-dark text-light">
+<footer class="page-footer font-small cyan darken-3 bg-dark text-light">
 
   <!-- Footer Elements -->
   <div class="container">
 
-    <!-- Social buttons -->
-    <ul class="list-unstyled list-inline text-center">
-	<i class="fa fa-car"></i>
-	<i class="fa fa-car" style="font-size:48px;"></i>
-	<i class="fa fa-car" style="font-size:60px;color:red;"></i>
-    </ul>
-    <!-- Social buttons -->
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="text-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic" href="#">
+            <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic" href="#">
+            <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic" href="#">
+            <i class="fa fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic" href="#">
+            <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
 
   </div>
   <!-- Footer Elements -->
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="#"> Aduane Fie</a>
+    <a href="#"> AduaneFie.com</a>
   </div>
   <!-- Copyright -->
 
 </footer>
 <!-- Footer -->
 
+	<!-- custom js -->
+	<script>
+		const DISHES = [ 
 
+					{id:1, name: 'Baked Bread', description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.", image:"julia.jpg"},
+					{id:2, name: 'The Alfredo Sauce', description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200", image: "alfredo-sauce.jpg"},
+ 					{id:3, name:'mini pavlovas', description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)", image:"mini-pavlovas.jpg"},
+
+ 					{id:4, name:'marviees parfait', description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)", image:"muffin-flower.jpg"},
+
+ 					{id:5, name:'Something here', description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)", image:"louis.jpg"},
+
+ 					{id:6, name:'Something here', description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)", image:"georgia.jpg"},
+
+ 					{id:7, name:'Something here', description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)", image:"khloe.jpg"},
+
+ 					{id:8, name:'Something here', description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)", image:"louis.jpg"}
+
+
+				 ];
+		const getDish = (id) => {
+			return DISHES.filter((dish) => (dish.id == id))[0]
+		};
+		function onDishClick(dish) {
+			const selectedDish = getDish(dish.id);
+			    // e.preventDefault();
+    			var mymodal = $('#exampleModalCenter');
+    			mymodal.find('.modal-title').text(selectedDish.name);
+			mymodal.find('.modal-img').attr("src", "images/" + selectedDish.image);
+			mymodal.find('.modal-description').text(selectedDish.description);
+
+    			mymodal.modal('show');
+		}
+	</script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
